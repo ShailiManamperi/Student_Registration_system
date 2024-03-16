@@ -155,6 +155,14 @@ M_Occupation=StringVar()
 MO_entry=Entry(obj2,textvariable=M_Occupation,width=25,font='arial 8')
 MO_entry.place(x=600,y=85)
 
+#image
+f=Frame(root,bd=3,bg="Black",width=165,height=165,relief=GROOVE)
+f.place(x=970,y=120)
+
+img=PhotoImage(file="images/upload photo.png")
+lbl=Label(f,bg="black",image=img)
+lbl.place(x=0,y=0)
+
 root.mainloop()
 
 
