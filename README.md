@@ -1,5 +1,5 @@
 This is a student management form created by using python langauge.
-frist i have to install some dependacies .
+'/n'frist i have to install some dependacies .
     1.pip install pathlib
     2.pip install openpyxl
     3.pip install xlrd
