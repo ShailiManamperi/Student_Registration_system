@@ -43,6 +43,17 @@ else:
 
     file.save('Student_data.xlsx')
 
+#top frames
+Label(root,text="Email:ijse@gmail.com",width=8,height=2,bg="#f0687c",anchor='e').pack(side=TOP,fill=X)
+Label(root,text="STUDENT REGISTRATION",width=8,height=2,bg="#c36464",fg='#fff',font='arial 15 bold').pack(side=TOP,fill=X)
+
+
+
+
+
+
+
+
 
 
 root.mainloop()
