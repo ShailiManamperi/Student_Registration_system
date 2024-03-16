@@ -46,7 +46,7 @@ else:
 
 #exit
 def Exit():
-
+    root.destroy()
 
 #gender
 def selection():
