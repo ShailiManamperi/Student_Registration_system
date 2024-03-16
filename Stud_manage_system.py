@@ -81,7 +81,13 @@ Date.set(d1)
 obj=LabelFrame(root,text="Student's Deatil",font=18,bd=2,width=880,bg=framebg,fg=framefg,height=210,relief=GROOVE)
 obj.place(x=20,y=170)
 
+Label(obj,text="Full name:",font='arial 12',bg=framebg,fg=framefg).place(x=20,y=35)
+Label(obj,text="Date of Birth:",font='arial 12',bg=framebg,fg=framefg).place(x=20,y=85)
+Label(obj,text="Gender:",font='arial 12',bg=framebg,fg=framefg).place(x=20,y=135)
 
+Label(obj,text="Class:",font='arial 12',bg=framebg,fg=framefg).place(x=480,y=35)
+Label(obj,text="Religon:",font='arial 12',bg=framebg,fg=framefg).place(x=480,y=85)
+Label(obj,text="Skills:",font='arial 12',bg=framebg,fg=framefg).place(x=480,y=135)
 
 
 
