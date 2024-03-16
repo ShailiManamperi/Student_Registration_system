@@ -43,8 +43,12 @@ else:
 
     file.save('Student_data.xlsx')
 
-#gender
 
+#exit
+def Exit():
+
+
+#gender
 def selection():
     value=radio.get()
     if value ==1:
@@ -162,6 +166,17 @@ f.place(x=970,y=120)
 img=PhotoImage(file="images/upload photo.png")
 lbl=Label(f,bg="black",image=img)
 lbl.place(x=0,y=0)
+
+
+#button
+Button(root,text="Upload",width=19,height=2,font='arial 12 bold',bg='lightblue').place(x=970,y=305)
+
+Button(root,text="Save",width=19,height=2,font='arial 12 bold',bg='lightgreen').place(x=970,y=375)
+
+Button(root,text="Update",width=19,height=2,font='arial 12 bold',bg='lightpink').place(x=970,y=445)
+
+Button(root,text="Exit",width=19,height=2,font='arial 12 bold',bg='grey',command=Exit).place(x=970,y=515)
+
 
 root.mainloop()
 
