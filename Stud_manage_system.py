@@ -76,6 +76,13 @@ date_entry = Entry(root,textvariable=Date,width=15,font='arial 12')
 date_entry.place(x=540,y=120)
 Date.set(d1)
 
+#Student detail
+
+obj=LabelFrame(root,text="Student's Deatil",font=18,bd=2,width=880,bg=framebg,fg=framefg,height=220,relief=GROOVE)
+obj.place(x=20,y=170)
+
+
+
 
 
 root.mainloop()
