@@ -116,7 +116,17 @@ R1.place(x=130,y=135)
 R2= Radiobutton(obj,text="Female",variable=radio,value=2,bg=framebg,fg=framefg,command=selection)
 R2.place(x=200,y=135)
 
+Class = Combobox(obj,values=['1','2','3','4','5','6','7','8','9','10','11','12','13'],font='Roboto 8',width=20,state='r')
+Class.place(x=600,y=35)
 
+
+Religon = StringVar()
+religon_entry = Entry(obj,textvariable=DOB,width=20,font='arial 8')
+religon_entry.place(x=600,y=85)
+
+Skills = StringVar()
+skills_entry = Entry(obj,textvariable=DOB,width=20,font='arial 8')
+skills_entry.place(x=600,y=135)
 
 #Parents detail
 
