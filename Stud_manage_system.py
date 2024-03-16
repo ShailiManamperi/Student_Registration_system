@@ -86,7 +86,6 @@ reg_entry = Entry(root,textvariable=Registration,width=15,font='arial 12')
 reg_entry.place(x=145,y=120)
 
 #Registration date()
-
 today=date.today()
 d1= today.strftime("%d/%m/%y")
 date_entry = Entry(root,textvariable=Date,width=15,font='arial 12')
@@ -94,7 +93,6 @@ date_entry.place(x=540,y=120)
 Date.set(d1)
 
 #Student detail
-
 obj=LabelFrame(root,text="Student's Deatil",font=18,bd=2,width=880,bg=framebg,fg=framefg,height=210,relief=GROOVE)
 obj.place(x=20,y=170)
 
@@ -133,7 +131,6 @@ skills_entry = Entry(obj,textvariable=DOB,width=25,font='arial 8')
 skills_entry.place(x=600,y=135)
 
 #Parents detail
-
 obj2=LabelFrame(root,text="Parents' Deatil",font=18,bd=2,width=880,bg=framebg,fg=framefg,height=180,relief=GROOVE)
 obj2.place(x=20,y=390)
 
