@@ -9,5 +9,8 @@ This is a student management form created by using python langauge.
 
 then make the python file to make gui view for this system by using these.
 
+after give the command to make excel file then it create automatically.you can see that in code line 25-44.
+
+
 
     
