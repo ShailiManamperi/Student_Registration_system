@@ -130,8 +130,14 @@ skills_entry.place(x=600,y=135)
 
 #Parents detail
 
-obj=LabelFrame(root,text="Parents' Deatil",font=18,bd=2,width=880,bg=framebg,fg=framefg,height=180,relief=GROOVE)
-obj.place(x=20,y=390)
+obj2=LabelFrame(root,text="Parents' Deatil",font=18,bd=2,width=880,bg=framebg,fg=framefg,height=180,relief=GROOVE)
+obj2.place(x=20,y=390)
+
+Label(obj2,text="Father's name:",font='arial 12',bg=framebg,fg=framefg).place(x=20,y=35)
+Label(obj2,text="Occupation:",font='arial 12',bg=framebg,fg=framefg).place(x=20,y=85)
+
+Label(obj2,text="Mother's name:",font='arial 12',bg=framebg,fg=framefg).place(x=480,y=35)
+Label(obj2,text="Occupation:",font='arial 12',bg=framebg,fg=framefg).place(x=480,y=85)
 
 
 
