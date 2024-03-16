@@ -43,6 +43,19 @@ else:
 
     file.save('Student_data.xlsx')
 
+#gender
+
+def selection():
+    value=radio.get()
+    if value ==1:
+        gender="Male"
+        print(gender)
+    else:
+        gender="Female"
+        print(gender)
+
+
+
 #top frames
 Label(root,text="Email:ijse@gmail.com",width=8,height=2,bg="#f0687c",anchor='e').pack(side=TOP,fill=X)
 Label(root,text="STUDENT REGISTRATION",width=8,height=2,bg="#c36464",fg='#fff',font='arial 15 bold').pack(side=TOP,fill=X)
@@ -89,7 +102,19 @@ Label(obj,text="Class:",font='arial 12',bg=framebg,fg=framefg).place(x=480,y=35)
 Label(obj,text="Religon:",font='arial 12',bg=framebg,fg=framefg).place(x=480,y=85)
 Label(obj,text="Skills:",font='arial 12',bg=framebg,fg=framefg).place(x=480,y=135)
 
+Name = StringVar()
+name_entry = Entry(obj,textvariable=Name,width=20,font='arial 8')
+name_entry.place(x=140,y=35)
 
+DOB = StringVar()
+dob_entry = Entry(obj,textvariable=DOB,width=20,font='arial 8')
+dob_entry.place(x=140,y=85)
+
+radio = IntVar()
+R1= Radiobutton(obj,text="Male",variable=radio,value=1,bg=framebg,fg=framefg,command=selection)
+R1.place(x=130,y=135)
+R2= Radiobutton(obj,text="Female",variable=radio,value=2,bg=framebg,fg=framefg,command=selection)
+R2.place(x=200,y=135)
 
 
 
