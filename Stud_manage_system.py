@@ -118,7 +118,7 @@ R2.place(x=200,y=135)
 
 Class = Combobox(obj,values=['1','2','3','4','5','6','7','8','9','10','11','12','13'],font='Roboto 8',width=20,state='r')
 Class.place(x=600,y=35)
-
+Class.set("Select Class")
 
 Religon = StringVar()
 religon_entry = Entry(obj,textvariable=DOB,width=20,font='arial 8')
