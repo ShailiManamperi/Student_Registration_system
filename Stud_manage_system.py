@@ -47,6 +47,12 @@ else:
 Label(root,text="Email:ijse@gmail.com",width=8,height=2,bg="#f0687c",anchor='e').pack(side=TOP,fill=X)
 Label(root,text="STUDENT REGISTRATION",width=8,height=2,bg="#c36464",fg='#fff',font='arial 15 bold').pack(side=TOP,fill=X)
 
+#search box to update
+Search = StringVar()
+Entry(root,textvariable=Search,width=20,bd=2,font='arial 16').place(x=800,y=50)
+imageicon3=PhotoImage(file="images/search.png")
+srch=Button(root,text="Search",compound=LEFT,width=100,image=imageicon3,bg='#68ddfa',font='arial 10 bold')
+srch.place(x=1060,y=51)
 
 
 
