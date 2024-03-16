@@ -54,7 +54,9 @@ imageicon3=PhotoImage(file="images/search.png")
 srch=Button(root,text="Search",compound=LEFT,width=100,image=imageicon3,bg='#68ddfa',font='arial 10 bold')
 srch.place(x=1060,y=51)
 
-
+imageicon4= PhotoImage(file="images/layers.png")
+Update_button=Button(root,image=imageicon4,bg="#c36464")
+Update_button.place(x=90,y=47)
 
 
 
