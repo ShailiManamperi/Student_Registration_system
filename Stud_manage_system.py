@@ -103,11 +103,11 @@ Label(obj,text="Religon:",font='arial 12',bg=framebg,fg=framefg).place(x=480,y=8
 Label(obj,text="Skills:",font='arial 12',bg=framebg,fg=framefg).place(x=480,y=135)
 
 Name = StringVar()
-name_entry = Entry(obj,textvariable=Name,width=20,font='arial 8')
+name_entry = Entry(obj,textvariable=Name,width=25,font='arial 8')
 name_entry.place(x=140,y=35)
 
 DOB = StringVar()
-dob_entry = Entry(obj,textvariable=DOB,width=20,font='arial 8')
+dob_entry = Entry(obj,textvariable=DOB,width=25,font='arial 8')
 dob_entry.place(x=140,y=85)
 
 radio = IntVar()
@@ -116,16 +116,16 @@ R1.place(x=130,y=135)
 R2= Radiobutton(obj,text="Female",variable=radio,value=2,bg=framebg,fg=framefg,command=selection)
 R2.place(x=200,y=135)
 
-Class = Combobox(obj,values=['1','2','3','4','5','6','7','8','9','10','11','12','13'],font='Roboto 8',width=20,state='r')
+Class = Combobox(obj,values=['1','2','3','4','5','6','7','8','9','10','11','12','13'],font='Roboto 8',width=23,state='r')
 Class.place(x=600,y=35)
 Class.set("Select Class")
 
 Religon = StringVar()
-religon_entry = Entry(obj,textvariable=DOB,width=20,font='arial 8')
+religon_entry = Entry(obj,textvariable=DOB,width=25,font='arial 8')
 religon_entry.place(x=600,y=85)
 
 Skills = StringVar()
-skills_entry = Entry(obj,textvariable=DOB,width=20,font='arial 8')
+skills_entry = Entry(obj,textvariable=DOB,width=25,font='arial 8')
 skills_entry.place(x=600,y=135)
 
 #Parents detail
@@ -139,7 +139,21 @@ Label(obj2,text="Occupation:",font='arial 12',bg=framebg,fg=framefg).place(x=20,
 Label(obj2,text="Mother's name:",font='arial 12',bg=framebg,fg=framefg).place(x=480,y=35)
 Label(obj2,text="Occupation:",font='arial 12',bg=framebg,fg=framefg).place(x=480,y=85)
 
+F_Name=StringVar()
+f_entry=Entry(obj2,textvariable=F_Name,width=25,font='arial 8')
+f_entry.place(x=140,y=35)
 
+F_Occupation=StringVar()
+FO_entry=Entry(obj2,textvariable=F_Occupation,width=25,font='arial 8')
+FO_entry.place(x=140,y=85)
+
+M_Name=StringVar()
+m_entry=Entry(obj2,textvariable=M_Name,width=25,font='arial 8')
+m_entry.place(x=600,y=35)
+
+M_Occupation=StringVar()
+MO_entry=Entry(obj2,textvariable=M_Occupation,width=25,font='arial 8')
+MO_entry.place(x=600,y=85)
 
 root.mainloop()
 
