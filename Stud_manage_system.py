@@ -48,6 +48,13 @@ else:
 def Exit():
     root.destroy()
 
+def showimage():
+    filename=filedialog.askopenfilename(initialdir=os.getcwd(),
+                                        title="Select image file",
+                                        filetypes=(("JPG File","*.jpg"),
+                                                   ("PNG File","*.png"),
+                                                   ("ALL files","*.txt")))
+
 #gender
 def selection():
     value=radio.get()
@@ -166,13 +173,14 @@ lbl.place(x=0,y=0)
 
 
 #button
-Button(root,text="Upload",width=19,height=2,font='arial 12 bold',bg='lightblue').place(x=970,y=305)
+Button(root,text="Upload",width=19,height=2,font='arial 12 bold',bg='lightblue',command=showimage).place(x=970,y=305)
 
 Button(root,text="Save",width=19,height=2,font='arial 12 bold',bg='lightgreen').place(x=970,y=375)
 
 Button(root,text="Update",width=19,height=2,font='arial 12 bold',bg='lightpink').place(x=970,y=445)
 
 Button(root,text="Exit",width=19,height=2,font='arial 12 bold',bg='grey',command=Exit).place(x=970,y=515)
+
 
 
 root.mainloop()
