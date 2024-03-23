@@ -106,15 +106,35 @@ def clear():
 
 #gender
 def selection():
+    global gender
     value=radio.get()
     if value ==1:
         gender="Male"
-        print(gender)
     else:
         gender="Female"
-        print(gender)
 
 
+#Save Function
+def save():
+    R1 = Registration.get()
+    N1 = Name.get()
+    C1 = Class.get()
+    try:
+        G1 = gender
+
+    except:
+        messagebox.showerror("Error","Select Gender")
+
+    D2 = DOB.get()
+    D1 = Date.get()
+    rel = Religon.get()
+    fathername = F_Name.get()
+    mothername = M_Name.get()
+    F1 = F_Occupation.get()
+    M1 = M_Occupation.get()
+
+    print(R1+" "+N1+" "+C1+" "+D1+" "+D2+" "+G1+" "+rel+" ")
+    print(fathername+"  "+F1+" "+mothername+" "+M1)
 
 #top frames
 Label(root,text="Email:ijse@gmail.com",width=8,height=2,bg="#f0687c",anchor='e').pack(side=TOP,fill=X)
@@ -227,7 +247,7 @@ lbl.place(x=0,y=0)
 #button
 Button(root,text="Upload",width=19,height=2,font='arial 12 bold',bg='lightblue',command=showimage).place(x=970,y=305)
 
-saveButton = Button(root,text="Save",width=19,height=2,font='arial 12 bold',bg='lightgreen')
+saveButton = Button(root,text="Save",width=19,height=2,font='arial 12 bold',bg='lightgreen',command=save)
 saveButton.place(x=970,y=375)
 
 Button(root,text="Reset",width=19,height=2,font='arial 12 bold',bg='lightpink',command=clear).place(x=970,y=445)
