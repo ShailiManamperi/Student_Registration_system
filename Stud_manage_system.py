@@ -163,6 +163,41 @@ def save():
         clear()
         registration_no()
 
+#search
+def search():
+    text = Search.get()
+    clear()
+    saveButton.config(state='disabled')
+
+    file = openpyxl.load_workbook("Student_data.xlsx")
+    sheet = file.active
+    for row in sheet.rows:
+        if row[0].value == int(text):
+            name=row[0]
+            reg_No_postion=str(name)[14:-1]
+            reg_number = str(name)[15:-1]
+
+    try:
+        print(str(name))
+    except:
+        messagebox.showerror("Invaild","Invaild registration number!!")
+
+
+    x1 = sheet.cell(row=int(reg_number),column=1).value
+    x2 = sheet.cell(row=int(reg_number),column=2).value
+    x3 = sheet.cell(row=int(reg_number),column=3).value
+    x4 = sheet.cell(row=int(reg_number),column=4).value
+    x5 = sheet.cell(row=int(reg_number),column=5).value
+    x6 = sheet.cell(row=int(reg_number),column=6).value
+    x7 = sheet.cell(row=int(reg_number),column=7).value
+    x8 = sheet.cell(row=int(reg_number),column=8).value
+    x9 = sheet.cell(row=int(reg_number),column=9).value
+    x10 = sheet.cell(row=int(reg_number),column=10).value
+    x11 = sheet.cell(row=int(reg_number),column=11).value
+    x12 = sheet.cell(row=int(reg_number),column=12).value
+
+
+
 
 #top frames
 Label(root,text="Email:ijse@gmail.com",width=8,height=2,bg="#f0687c",anchor='e').pack(side=TOP,fill=X)
@@ -172,7 +207,7 @@ Label(root,text="STUDENT REGISTRATION",width=8,height=2,bg="#c36464",fg='#fff',f
 Search = StringVar()
 Entry(root,textvariable=Search,width=20,bd=2,font='arial 16').place(x=800,y=50)
 imageicon3=PhotoImage(file="images/search.png")
-srch=Button(root,text="Search",compound=LEFT,width=100,image=imageicon3,bg='#68ddfa',font='arial 10 bold')
+srch=Button(root,text="Search",compound=LEFT,width=100,image=imageicon3,bg='#68ddfa',font='arial 10 bold',command=search)
 srch.place(x=1060,y=51)
 
 imageicon4= PhotoImage(file="images/layers.png")
