@@ -79,6 +79,28 @@ def registration_no():
         Registration.set("1")
 
 
+#Clear
+def clear():
+    Name.set('')
+    DOB.set('')
+    Religon.set('')
+    Skills.set('')
+    F_Name.set('')
+    M_Name.set('')
+    F_Occupation.set('')
+    M_Occupation.set('')
+    Class.set("Select Class")
+
+    registration_no()
+
+    saveButton.config(state = 'normal')
+
+    img1 = PhotoImage(file='images/upload photo.png')
+    lbl.config(image=img1)
+    lbl.image=img1
+
+    img = ""
+
 
 
 
@@ -160,11 +182,11 @@ Class.place(x=600,y=35)
 Class.set("Select Class")
 
 Religon = StringVar()
-religon_entry = Entry(obj,textvariable=DOB,width=25,font='arial 8')
+religon_entry = Entry(obj,textvariable=Religon,width=25,font='arial 8')
 religon_entry.place(x=600,y=85)
 
 Skills = StringVar()
-skills_entry = Entry(obj,textvariable=DOB,width=25,font='arial 8')
+skills_entry = Entry(obj,textvariable=Skills,width=25,font='arial 8')
 skills_entry.place(x=600,y=135)
 
 #Parents detail
@@ -205,9 +227,10 @@ lbl.place(x=0,y=0)
 #button
 Button(root,text="Upload",width=19,height=2,font='arial 12 bold',bg='lightblue',command=showimage).place(x=970,y=305)
 
-Button(root,text="Save",width=19,height=2,font='arial 12 bold',bg='lightgreen').place(x=970,y=375)
+saveButton = Button(root,text="Save",width=19,height=2,font='arial 12 bold',bg='lightgreen')
+saveButton.place(x=970,y=375)
 
-Button(root,text="Update",width=19,height=2,font='arial 12 bold',bg='lightpink').place(x=970,y=445)
+Button(root,text="Reset",width=19,height=2,font='arial 12 bold',bg='lightpink',command=clear).place(x=970,y=445)
 
 Button(root,text="Exit",width=19,height=2,font='arial 12 bold',bg='grey',command=Exit).place(x=970,y=515)
 
