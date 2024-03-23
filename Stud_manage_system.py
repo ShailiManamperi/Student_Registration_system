@@ -221,7 +221,57 @@ def search():
     lbl.image=photo2
 
 
+#update
+def update():
+    global G1
+    R1 = Registration.get()
+    N1 = Name.get()
+    C1 = Class.get()
+    try:
+        G1 = gender
 
+    except:
+        messagebox.showerror("Error", "Select Gender")
+
+    D2 = DOB.get()
+    D1 = Date.get()
+    rel = Religon.get()
+    S1 = Skills.get()
+    fathername = F_Name.get()
+    mothername = M_Name.get()
+    F1 = F_Occupation.get()
+    M1 = M_Occupation.get()
+
+    file = openpyxl.load_workbook('Student_data.xlsx')
+    sheet = file.active
+
+    for row in sheet.rows:
+        if row[0].value == R1:
+            name=row[0]
+            reg_num=str(name)[15:-1]
+
+    sheet.cell(column=2,row=int(reg_num),value=N1)
+    sheet.cell(column=3,row=int(reg_num),value=C1)
+    sheet.cell(column=4,row=int(reg_num),value=G1)
+    sheet.cell(column=5,row=int(reg_num),value=D2)
+    sheet.cell(column=6,row=int(reg_num),value=D1)
+    sheet.cell(column=7,row=int(reg_num),value=rel)
+    sheet.cell(column=8,row=int(reg_num),value=S1)
+    sheet.cell(column=9,row=int(reg_num),value=fathername)
+    sheet.cell(column=10,row=int(reg_num),value=mothername)
+    sheet.cell(column=11,row=int(reg_num),value=F1)
+    sheet.cell(column=12,row=int(reg_num),value=M1)
+
+    file.save(r'Student_data.xlsx')
+
+    try:
+        img.save("images/studentImage/"+str(R1)+".jpg")
+    except:
+        pass
+
+    messagebox.showinfo("Update","update sucessfully")
+
+    clear()
 
 #top frames
 Label(root,text="Email:ijse@gmail.com",width=8,height=2,bg="#f0687c",anchor='e').pack(side=TOP,fill=X)
@@ -235,7 +285,7 @@ srch=Button(root,text="Search",compound=LEFT,width=100,image=imageicon3,bg='#68d
 srch.place(x=1060,y=51)
 
 imageicon4= PhotoImage(file="images/layers.png")
-Update_button=Button(root,image=imageicon4,bg="#c36464")
+Update_button=Button(root,image=imageicon4,bg="#c36464",command=update)
 Update_button.place(x=90,y=47)
 
 
