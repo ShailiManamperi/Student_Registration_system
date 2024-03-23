@@ -54,6 +54,11 @@ def showimage():
                                         filetypes=(("JPG File","*.jpg"),
                                                    ("PNG File","*.png"),
                                                    ("ALL files","*.txt")))
+    img = (Image.open(filename))
+    resized_image = img.resize((165,165))
+    photo2 = ImageTk.PhotoImage(resized_image)
+    lbl.config(image=photo2)
+    lbl.image=photo2
 
 #gender
 def selection():
