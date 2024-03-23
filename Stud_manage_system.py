@@ -116,6 +116,7 @@ def selection():
 
 #Save Function
 def save():
+    global G1
     R1 = Registration.get()
     N1 = Name.get()
     C1 = Class.get()
@@ -128,13 +129,41 @@ def save():
     D2 = DOB.get()
     D1 = Date.get()
     rel = Religon.get()
+    S1 = Skills.get()
     fathername = F_Name.get()
     mothername = M_Name.get()
     F1 = F_Occupation.get()
     M1 = M_Occupation.get()
 
-    print(R1+" "+N1+" "+C1+" "+D1+" "+D2+" "+G1+" "+rel+" ")
-    print(fathername+"  "+F1+" "+mothername+" "+M1)
+    if N1=="" or C1=="Select Class" or D2=="" or rel=="" or S1=="" or fathername=="" or mothername=="" or F1=="" or M1=="" :
+        messagebox.showerror("error","Few Data is missing")
+    else:
+        file=openpyxl.load_workbook('Student_data.xlsx')
+        sheet = file.active
+        sheet.cell(column=1,row=sheet.max_row+1,value=R1)
+        sheet.cell(column=2,row=sheet.max_row,value=N1)
+        sheet.cell(column=3,row=sheet.max_row,value=C1)
+        sheet.cell(column=4,row=sheet.max_row,value=G1)
+        sheet.cell(column=5,row=sheet.max_row,value=D2)
+        sheet.cell(column=6,row=sheet.max_row,value=D1)
+        sheet.cell(column=7,row=sheet.max_row,value=rel)
+        sheet.cell(column=8,row=sheet.max_row,value=S1)
+        sheet.cell(column=9,row=sheet.max_row,value=fathername)
+        sheet.cell(column=10,row=sheet.max_row,value=mothername)
+        sheet.cell(column=11,row=sheet.max_row,value=F1)
+        sheet.cell(column=12,row=sheet.max_row,value=M1)
+        file.save(r'Student_data.xlsx')
+
+        try:
+            img.save("images/studentImage/"+str(R1)+".jpg")
+        except:
+            messagebox.showinfo("info","Profile picture is not available!!!")
+
+        messagebox.showinfo("info","Sucessfully data enterd!!")
+
+        clear()
+        registration_no()
+
 
 #top frames
 Label(root,text="Email:ijse@gmail.com",width=8,height=2,bg="#f0687c",anchor='e').pack(side=TOP,fill=X)
