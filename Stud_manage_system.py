@@ -100,9 +100,6 @@ def clear():
 
     img = ""
 
-
-
-
 #gender
 def selection():
     global gender
@@ -391,8 +388,6 @@ saveButton.place(x=970,y=375)
 Button(root,text="Reset",width=19,height=2,font='arial 12 bold',bg='lightpink',command=clear).place(x=970,y=445)
 
 Button(root,text="Exit",width=19,height=2,font='arial 12 bold',bg='grey',command=Exit).place(x=970,y=515)
-
-
 
 root.mainloop()
 
