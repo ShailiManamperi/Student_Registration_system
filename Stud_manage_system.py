@@ -196,6 +196,30 @@ def search():
     x11 = sheet.cell(row=int(reg_number),column=11).value
     x12 = sheet.cell(row=int(reg_number),column=12).value
 
+    Registration.set(x1)
+    Name.set(x2)
+    Class.set(x3)
+
+    if x4=='Female':
+        R2.select()
+    else:
+        R1.select()
+
+    Date.set(x6)
+    DOB.set(x5)
+    Religon.set(x7)
+    Skills.set(x8)
+    F_Name.set(x9)
+    M_Name.set(x10)
+    F_Occupation.set(x11)
+    M_Occupation.set(x12)
+
+    img = (Image.open("images/studentImage/"+str(x1)+".jpg"))
+    resized_image  = img.resize((165,165))
+    photo2 = ImageTk.PhotoImage(resized_image)
+    lbl.config(image=photo2)
+    lbl.image=photo2
+
 
 
 
