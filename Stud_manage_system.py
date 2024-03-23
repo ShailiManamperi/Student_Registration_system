@@ -48,7 +48,10 @@ else:
 def Exit():
     root.destroy()
 
+#Show image
 def showimage():
+    global filename
+    global img
     filename=filedialog.askopenfilename(initialdir=os.getcwd(),
                                         title="Select image file",
                                         filetypes=(("JPG File","*.jpg"),
@@ -59,6 +62,25 @@ def showimage():
     photo2 = ImageTk.PhotoImage(resized_image)
     lbl.config(image=photo2)
     lbl.image=photo2
+
+
+#Resigter No
+def registration_no():
+    file = openpyxl.load_workbook('Student_data.xlsx')
+    sheet =  file.active
+    row = sheet.max_row
+
+    max_row_value = sheet.cell(row=row,column=1)  #check dta of last row and add 1 to the reg no.if it is 0 then it give 1
+
+    try :
+        Registration.set(max_row_value+1)
+
+    except:
+        Registration.set("1")
+
+
+
+
 
 #gender
 def selection():
@@ -96,6 +118,9 @@ Registration=StringVar()
 Date = StringVar()
 reg_entry = Entry(root,textvariable=Registration,width=15,font='arial 12')
 reg_entry.place(x=145,y=120)
+
+registration_no()
+
 
 #Registration date()
 today=date.today()
