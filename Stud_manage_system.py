@@ -70,10 +70,9 @@ def registration_no():
     sheet =  file.active
     row = sheet.max_row
 
-    max_row_value = sheet.cell(row=row,column=1)  #check dta of last row and add 1 to the reg no.if it is 0 then it give 1
-
+    max_row_value = sheet.cell(row=row,column=1).value
     try :
-        Registration.set(max_row_value+1)
+        Registration.set(int(max_row_value)+1)
 
     except:
         Registration.set("1")
@@ -185,8 +184,9 @@ Update_button.place(x=90,y=47)
 Label(root,text="Registration No:",font='arial 10',fg=framebg,bg=background).place(x=28,y=120)
 Label(root,text="Date:",font='arial 10',fg=framebg,bg=background).place(x=490,y=120)
 
-Registration=StringVar()
+Registration=IntVar()
 Date = StringVar()
+
 reg_entry = Entry(root,textvariable=Registration,width=15,font='arial 12')
 reg_entry.place(x=145,y=120)
 
